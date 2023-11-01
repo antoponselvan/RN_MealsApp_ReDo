@@ -1,3 +1,4 @@
+import { FavListContextProvider } from './store/context/favourities-context';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native'
@@ -32,7 +33,7 @@ export default function App() {
   }
 
   return (
-    <>
+    <FavListContextProvider>
       <StatusBar style="light" />
       <NavigationContainer>
         <Stack.Navigator>
@@ -46,7 +47,7 @@ export default function App() {
         </Stack.Navigator>
       </NavigationContainer>
       {/* <DrawerNavigator/> */}
-    </>
+    </FavListContextProvider>
   );
 }
 
